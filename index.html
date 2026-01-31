@@ -1,120 +1,106 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Selamat Pagi Cintakuh Aliya 🫶🏻💞</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selamat Pagi Cintakuh Aliya 🫶🏻💞</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Handlee&family=Sriracha&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Handlee&family=Sriracha&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://htmlku.com/lepaslelah/style.css">
 
-  <!-- Style utama -->
-  <link rel="stylesheet" href="https://htmlku.com/lepaslelah/style.css">
+<!-- FIX iOS: background tidak menutup klik -->
+<style>
+  .background-overlay {
+    pointer-events: none;
+  }
+</style>
 
-  <!-- FIX iOS: background tidak menutup klik -->
-  <style>
-    .background-overlay {
-      pointer-events: none;
-    }
-  </style>
-
-  <!-- Library -->
-  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+<script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
 </head>
 
 <body>
 
-  <!-- AUDIO (AMAN DI IPHONE) -->
-  <audio id="linkmp3" preload="none" playsinline>
-    <source src="https://feeldreams.github.io/audio/wedont.mp3" type="audio/mpeg">
-  </audio>
+<!-- AUDIO iOS SAFE -->
+<audio id="linkmp3" preload="none" playsinline>
+  <source src="https://feeldreams.github.io/audio/wedont.mp3" type="audio/mpeg">
+</audio>
 
-  <!-- BACKGROUND -->
-  <div class="background-overlay"
-    data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuwbO_NyQeozwcybDF1OaPMzQy0t8AYv718sFc_lFl6LqHdyZG9HgQ-Tp4rusKtixlYVKBP-ORlbn30Q1pdMa3SOZ4osL8Cvg100Uh6FeD639gn6h0WwAQr_nAeUPJE8GKNk9eqN1YgMln2VMKTQUcFlB1Th93N_QodkeMSiqw8K5OXMUd5Bv2yHAJSnch/s1600/81495.jpg">
-  </div>
+<div class="background-overlay"
+data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuwbO_NyQeozwcybDF1OaPMzQy0t8AYv718sFc_lFl6LqHdyZG9HgQ-Tp4rusKtixlYVKBP-ORlbn30Q1pdMa3SOZ4osL8Cvg100Uh6FeD639gn6h0WwAQr_nAeUPJE8GKNk9eqN1YgMln2VMKTQUcFlB1Th93N_QodkeMSiqw8K5OXMUd5Bv2yHAJSnch/s1600/81495.jpg">
+</div>
 
-  <!-- GAMBAR ATAS -->
-  <img id="finalGreetingImage" src="https://htmlku.com/0/panda/hearthappy.gif" alt="Good Morning">
+<img id="finalGreetingImage" src="https://htmlku.com/0/panda/hearthappy.gif">
 
-  <!-- TEKS ATAS -->
-  <div id="finalGreeting">
-    Good Morning Cintakuh Aliya! ♡.ᐟ
-  </div>
+<div id="finalGreeting">
+Good Morning Cintakuh Aliya! ♡.ᐟ
+</div>
 
-  <!-- HALAMAN 1 -->
-  <div id="hal1">
-    <div class="envlope-wrapper">
-      <div id="envelope" class="close">
-        <div class="front flap"></div>
-        <div class="front pocket"></div>
-        <div class="envelope-heart">🤍</div>
+<!-- HALAMAN 1 -->
+<div id="hal1">
+  <div class="envlope-wrapper">
+    <div id="envelope" class="close">
+      <div class="front flap"></div>
+      <div class="front pocket"></div>
+      <div class="envelope-heart">🤍</div>
 
-        <div class="letter">
-          <div class="letter-corner corner-tl"></div>
-          <div class="letter-corner corner-br"></div>
-          <div class="message">
-            <p>For You 🎉</p>
-          </div>
+      <div class="letter">
+        <div class="letter-corner corner-tl"></div>
+        <div class="letter-corner corner-br"></div>
+        <div class="message">
+          <p>For You 🎉</p>
         </div>
       </div>
     </div>
-
-    <div class="reset">
-      <button onclick="startAll()">💭 Buka Surat Ini Ya</button>
-    </div>
   </div>
 
-  <!-- HALAMAN 3 -->
-  <div id="hal3" class="kotak sembunyi">
-    <div id="stiker3" class="stiker">
-      <img src="https://htmlku.com/0/panda/ciumin.gif">
-    </div>
+  <div class="reset">
+    <button onclick="startAll()">💭 Buka Surat Ini Ya</button>
+  </div>
+</div>
 
-    <div id="containerPesan">
-      <p id="teksCinta"></p>
-      <p id="pesanAkhir"></p>
-      <p id="teksLucu"></p>
-    </div>
+<!-- HALAMAN 2 (WAJIB ADA UNTUK TEKS) -->
+<div id="hal2" class="kotak sembunyi">
+  <div id="kotakPesan"></div>
+  <button id="lanjut" onclick="pindahHal(3)" class="sembunyi">Lanjut</button>
+</div>
+
+<!-- HALAMAN 3 -->
+<div id="hal3" class="kotak sembunyi">
+  <div id="stiker3" class="stiker">
+    <img src="https://htmlku.com/0/panda/ciumin.gif">
   </div>
 
-  <!-- TOMBOL BALAS -->
-  <div class="tombol">
-    <button onclick="balasWa()">💌 Balas</button>
+  <div id="containerPesan">
+    <p id="teksCinta"></p>
+    <p id="pesanAkhir"></p>
+    <p id="teksLucu"></p>
   </div>
+</div>
 
-  <!-- TEKS (ASLI PUNYA KAMU) -->
-  <script>
-    const txtDoa =
-      "Selamat Pagi Sayangku Semangat Kerjanya Ya🫶🏻💞 Aku bener-bener beruntung punya kamu dan aku sayang banget sama kamu 💞";
+<div class="tombol">
+  <button onclick="balasWa()">💌 Balas</button>
+</div>
 
-    const txtPesanAkhir =
-      "Maafin aku ya kalau aku sering bikin salah dan belum selalu bisa ngertiin kamu 🥺💗";
+<!-- TEKS -->
+<script>
+const txtDoa = "Selamat Pagi Sayangku Semangat Kerjanya Ya🫶🏻💞 Aku bener-bener beruntung punya kamu, aku sayang banget sama kamu 💞";
+const txtPesanAkhir = "Maafin aku ya kalau aku sering bikin salah dan belum selalu bisa ngertiin kamu 🥺💗";
+const txtLucu = "── ᯓᡣ𐭩<br>Good Morning, Have a Nice Day 💖<br><b>I love you so much</b>";
+</script>
 
-    const txtLucu =
-      "── ᯓᡣ𐭩<br>Good Morning, Have a Nice Day 💖<br><b>I love you so much</b>";
-  </script>
+<script src="https://htmlku.com/lepaslelah/script.js"></script>
 
-  <!-- SCRIPT UTAMA -->
-  <script src="https://htmlku.com/lepaslelah/script.js"></script>
-
-  <!-- FIX iOS: AUDIO + FALLBACK -->
-  <script>
-    function startAll() {
-      const audio = document.getElementById("linkmp3");
-      if (audio) {
-        audio.muted = false;
-        audio.play().catch(() => {});
-      }
-
-      if (typeof bukaEnvelope === "function") {
-        bukaEnvelope();
-      } else {
-        document.getElementById("hal1").style.display = "none";
-        document.getElementById("hal3").classList.remove("sembunyi");
-      }
-    }
-  </script>
+<!-- FIX AUDIO iOS -->
+<script>
+function startAll(){
+  const audio = document.getElementById("linkmp3");
+  if(audio){
+    audio.muted = false;
+    audio.play().catch(()=>{});
+  }
+  bukaEnvelope();
+}
+</script>
 
 </body>
 </html>
